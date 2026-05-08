@@ -1,4 +1,4 @@
-# Ice Cream to Fight Over - Style Guide
+# Ice Cream to Fight With - Style Guide
 
 ## Overview
 
@@ -47,7 +47,7 @@ This is non-negotiable. Any violations found during review get fixed on sight, n
 
 ## Complete Book Structure
 
-The book "Ice Cream to Fight Over: Recipes You'll Fuck Up At Least Once" is organized like this:
+The book "Ice Cream to Fight With: Recipes You'll Fuck Up At Least Once" is organized like this:
 
 **Front Matter:**
 1. **Title Page** - Full title with subtitle

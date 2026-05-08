@@ -1,4 +1,4 @@
-# CLAUDE.md - AI Assistant Guide for Ice Cream to Fight Over
+# CLAUDE.md - AI Assistant Guide for Ice Cream to Fight With
 
 **Last Updated:** 2026-03-07
 **Repository:** ice-cream-book
@@ -27,7 +27,7 @@
 
 ### What This Is
 
-**"Ice Cream to Fight Over: Recipes You'll Fuck Up At Least Once"** is a professionally-written cookbook featuring sophisticated international ice cream recipes with detailed cultural context, technique instruction, and a distinctive conversational voice.
+**"Ice Cream to Fight With: Recipes You'll Fuck Up At Least Once"** is a professionally-written cookbook featuring sophisticated international ice cream recipes with detailed cultural context, technique instruction, and a distinctive conversational voice.
 
 **Key Characteristics:**
 - Complete ice cream recipes spanning international cuisines
@@ -66,7 +66,7 @@ ice-cream-book/
 │   └── re.sh                      # Recipe renumbering utility
 ├── back_matter/                   # Closing content (1 file, ~4KB)
 │   └── 99_closing.md
-├── Ice_Cream_to_Fight_Over_COMPLETE.md  # Compiled output (~345KB)
+├── Ice_Cream_to_Fight_With_COMPLETE.md  # Compiled output (~345KB)
 ├── README.md                      # Workflow documentation
 ├── STYLE_GUIDE.md                 # Comprehensive style guide (515 lines)
 ├── CLAUDE.md                      # This file
@@ -219,7 +219,7 @@ git push -u origin claude/claude-md-mi6fyi978ce21pnr-019jNus9dKds9SXH4hMkodJQ
 **After compilation:**
 ```bash
 python compile_book.py
-git add Ice_Cream_to_Fight_Over_COMPLETE.md
+git add Ice_Cream_to_Fight_With_COMPLETE.md
 git commit -m "Recompile book with latest changes"
 git push -u origin claude/claude-md-mi6fyi978ce21pnr-019jNus9dKds9SXH4hMkodJQ
 ```
@@ -233,7 +233,7 @@ git push -u origin claude/claude-md-mi6fyi978ce21pnr-019jNus9dKds9SXH4hMkodJQ
 
 Add to `.gitignore` if you want to track only source files:
 ```
-Ice_Cream_to_Fight_Over_COMPLETE.md
+Ice_Cream_to_Fight_With_COMPLETE.md
 ```
 
 ### Pull Request Creation
@@ -266,7 +266,7 @@ chmod +x compile_book.sh
 ```
 
 **Output file:**
-- `Ice_Cream_to_Fight_Over_COMPLETE.md`
+- `Ice_Cream_to_Fight_With_COMPLETE.md`
 
 ### Compilation Behavior
 
@@ -597,7 +597,7 @@ python compile_book.py
 
 # 5. Commit
 git add recipes/##_new_recipe.md
-git add Ice_Cream_to_Fight_Over_COMPLETE.md
+git add Ice_Cream_to_Fight_With_COMPLETE.md
 git commit -m "Add new recipe: [recipe name]"
 git push -u origin <branch-name>
 ```
@@ -617,7 +617,7 @@ python compile_book.py
 
 # 5. Commit
 git add front_matter/##_section_name.md
-git add Ice_Cream_to_Fight_Over_COMPLETE.md
+git add Ice_Cream_to_Fight_With_COMPLETE.md
 git commit -m "Update [section name]"
 git push -u origin <branch-name>
 ```
@@ -633,10 +633,10 @@ chmod +x compile_book.sh
 ./compile_book.sh
 
 # Verify output
-ls -lh Ice_Cream_to_Fight_Over_COMPLETE.md
+ls -lh Ice_Cream_to_Fight_With_COMPLETE.md
 
 # Commit if satisfied
-git add Ice_Cream_to_Fight_Over_COMPLETE.md
+git add Ice_Cream_to_Fight_With_COMPLETE.md
 git commit -m "Recompile book with latest changes"
 git push -u origin <branch-name>
 ```

@@ -4,7 +4,7 @@
 #
 # This sends a repository_dispatch event to PitziLabs/cloud-platform-demo,
 # which triggers the full build & deploy pipeline:
-#   Astro build → Docker → ECR → ECS → icecreamtofightover.com
+#   Astro build → Docker → ECR → ECS → icecreamtofightwith.com
 #
 # Note: compile-book.yml handles PR validation (spell check, compile).
 # This workflow handles post-merge deployment. Different triggers,

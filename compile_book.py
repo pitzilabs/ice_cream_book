@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Compile Ice Cream to Fight Over from modular files.
+Compile Ice Cream to Fight With from modular files.
 
 Usage:
     python compile_book.py
 
 Output:
-    Ice_Cream_to_Fight_Over_COMPLETE.md
+    Ice_Cream_to_Fight_With_COMPLETE.md
 """
 
 import os
@@ -52,7 +52,7 @@ def compile_book():
 
     complete_content = '\n\n---\n\n'.join(output)
 
-    output_file = 'Ice_Cream_to_Fight_Over_COMPLETE.md'
+    output_file = 'Ice_Cream_to_Fight_With_COMPLETE.md'
 
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(complete_content)

@@ -57,13 +57,13 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet Ice_Cream_to_Fight_Over_COMPLETE.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet Ice_Cream_to_Fight_With_COMPLETE.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit compiled book
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Ice_Cream_to_Fight_Over_COMPLETE.md
+          git add Ice_Cream_to_Fight_With_COMPLETE.md
           git commit -m "Auto-compile book from source changes"
           git push
