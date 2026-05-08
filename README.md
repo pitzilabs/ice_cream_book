@@ -1,6 +1,6 @@
 # ice-cream-book
 
-A professionally-written ice cream cookbook featuring 27 original custard-based recipes spanning international cuisines, built as a modular Markdown project and served as content for [icecreamtofightover.com](https://icecreamtofightover.com). The book combines sophisticated technique instruction with a distinctive conversational voice — recipes you'll actually want to read, not just follow.
+A professionally-written ice cream cookbook featuring 27 original custard-based recipes spanning international cuisines, built as a modular Markdown project and served as content for [icecreamtofightwith.com](https://icecreamtofightwith.com). The book combines sophisticated technique instruction with a distinctive conversational voice — recipes you'll actually want to read, not just follow.
 
 ## Why This Exists
 
@@ -84,13 +84,13 @@ python compile_book.py    # Python (preferred)
 ./compile_book.sh         # Bash (alternative)
 ```
 
-Output: `Ice_Cream_to_Fight_Over_COMPLETE.md`
+Output: `Ice_Cream_to_Fight_With_COMPLETE.md`
 
 See [STYLE_GUIDE.md](STYLE_GUIDE.md) for content conventions and [CLAUDE.md](CLAUDE.md) for the full development guide.
 
 ## Related Repositories
 
-- [**cloud-platform-demo**](https://github.com/PitziLabs/cloud-platform-demo) — Terraform-managed AWS infrastructure that hosts this content at icecreamtofightover.com. Pushes to main here trigger cross-repo dispatch to deploy.
+- [**cloud-platform-demo**](https://github.com/PitziLabs/cloud-platform-demo) — Terraform-managed AWS infrastructure that hosts this content at icecreamtofightwith.com. Pushes to main here trigger cross-repo dispatch to deploy.
 - [**PitziLabs**](https://github.com/PitziLabs) — GitHub organization housing this and related projects.
 
 ## License

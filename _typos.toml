@@ -16,7 +16,7 @@ assed = "assed"
 
 [files]
 extend-exclude = [
-    "Ice_Cream_to_Fight_Over_COMPLETE.md",
+    "Ice_Cream_to_Fight_With_COMPLETE.md",
     "*.sh",
     "images/",
 ]

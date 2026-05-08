@@ -1,6 +1,6 @@
 # How This Book Becomes a Website
 
-This document describes how `ice-cream-book` relates to its companion repository, [`PitziLabs/cloud-platform-demo`](https://github.com/PitziLabs/cloud-platform-demo), which turns these recipes into a live website at **icecreamtofightover.com**.
+This document describes how `ice-cream-book` relates to its companion repository, [`PitziLabs/cloud-platform-demo`](https://github.com/PitziLabs/cloud-platform-demo), which turns these recipes into a live website at **icecreamtofightwith.com**.
 
 ## This Repo's Role
 
@@ -31,7 +31,7 @@ ice-cream-book/recipes/*.md
         │  - Generates YAML frontmatter for Astro
         │  - Writes to src/content/recipes/
         ▼
-  Astro static site build → nginx container → ECS Fargate → icecreamtofightover.com
+  Astro static site build → nginx container → ECS Fargate → icecreamtofightwith.com
 ```
 
 In CI/CD, the `RECIPE_SOURCE` environment variable points `sync_recipes.py` at this repo's recipe files. For local development, the script defaults to `../ice-cream-book/recipes/`, expecting both repos to be cloned as siblings.
