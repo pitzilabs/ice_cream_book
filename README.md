@@ -1,10 +1,12 @@
 # ice-cream-book
 
-A professionally-written ice cream cookbook featuring 27 original custard-based recipes spanning international cuisines, built as a modular Markdown project and served as content for [icecreamtofightwith.com](https://icecreamtofightwith.com). The book combines sophisticated technique instruction with a distinctive conversational voice — recipes you'll actually want to read, not just follow.
+A 27-recipe custard-based ice cream cookbook spanning international cuisines, built as a modular Markdown project and served as content for [icecreamtofightwith.com](https://icecreamtofightwith.com). The book combines sophisticated technique instruction with a distinctive conversational voice — recipes you'll actually want to read, not just follow.
+
+**Authorship:** The recipes, front matter, and build scripts in this repo are co-written with [Claude](https://claude.ai) (Anthropic). I bring the flavor ideas, technique experience, and editorial direction; Claude writes the prose and the code. I'm an infrastructure operator, not a software engineer or a professional writer — please don't read this repo as a portfolio of either coding or authorship.
 
 ## Why This Exists
 
-Written by Chris Pitzi with Claude (Anthropic). What started as a personal recipe collection became a full cookbook project: 27 original recipes developed through iterative design, flavor pairing research, and obsessive attention to technique. Every recipe has been tested, revised, and documented with the kind of detail that actually helps someone make ice cream — not the sanitized, hedge-everything approach of most cookbooks.
+What started as a personal recipe collection became a full cookbook project: 27 recipes developed through iterative design, flavor pairing research, and obsessive attention to technique. Every recipe has been tested, revised, and documented with the kind of detail that actually helps someone make ice cream — not the sanitized, hedge-everything approach of most cookbooks.
 
 The project is also a deliberate exercise in modular content architecture. The book lives as individual Markdown files, compiled on demand, version-controlled with git, and deployed as a static site through the companion infrastructure repository. No CMS, no database, no proprietary formats — just text files and a build script.
 
