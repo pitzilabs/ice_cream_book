@@ -2,12 +2,6 @@ name: Auto-compile book
 
 on:
   pull_request:
-    paths:
-      - 'front_matter/**'
-      - 'recipes/**'
-      - 'back_matter/**'
-      - 'compile_book.py'
-      - '_typos.toml'
 
 permissions:
   contents: write
