@@ -2,13 +2,6 @@ name: Lint content
 
 on:
   pull_request:
-    paths:
-      - 'front_matter/**'
-      - 'recipes/**'
-      - 'back_matter/**'
-      - 'canonical_samples/**'
-      - 'ice_cream_linter.py'
-      - 'tests/**'
 
 permissions:
   contents: read
