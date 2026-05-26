@@ -16,6 +16,15 @@ on:
     branches: [main]
   workflow_dispatch: {}
 
+# Serialize deploys. Multiple PRs merged in quick succession would
+# otherwise produce parallel runs racing each other for the :latest
+# tag on ECR — last push wins, intermediate runs are wasted, and
+# the final live image is non-deterministic. cancel-in-progress
+# means the most recent push always wins cleanly.
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
 permissions:
   id-token: write
   contents: read
