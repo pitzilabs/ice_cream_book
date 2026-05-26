@@ -2,9 +2,7 @@
 // Renders a Home › Tier › Recipe trail at the top of recipe pages,
 // plus a schema.org BreadcrumbList JSON-LD block alongside it.
 //
-// Tier link target is a homepage anchor (#chill, #legit, #real-deal,
-// #ordeal) — those IDs are set on each tier-section in index.astro.
-// When Phase 2 filtered tier pages land, swap to dedicated routes.
+// Tier link targets the dedicated tier index page at /tier/<slug>/.
 interface Props {
   tier: string;          // CHILL / LEGIT / THE REAL DEAL / A FUCKING ORDEAL
   recipeTitle: string;
@@ -14,15 +12,15 @@ interface Props {
 
 const { tier, recipeTitle, recipeUrl, siteUrl } = Astro.props;
 
-const TIER_ANCHOR: Record<string, string> = {
+const TIER_SLUG: Record<string, string> = {
   'CHILL': 'chill',
   'LEGIT': 'legit',
   'THE REAL DEAL': 'real-deal',
   'A FUCKING ORDEAL': 'ordeal',
 };
 
-const tierAnchor = TIER_ANCHOR[tier] ?? 'legit';
-const tierHref = `/#${tierAnchor}`;
+const tierSlug = TIER_SLUG[tier] ?? 'legit';
+const tierHref = `/tier/${tierSlug}/`;
 const tierAbsoluteUrl = new URL(tierHref, siteUrl).toString();
 const homeUrl = new URL('/', siteUrl).toString();
 
