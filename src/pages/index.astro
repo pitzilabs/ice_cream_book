@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
 import { getCollection } from 'astro:content';
 
 const recipes = await getCollection('recipes');
@@ -28,16 +29,20 @@ const tiers = [
     {tiers.map(tier => (
       <section class="tier-section" id={tier.class}>
         <div class="tier-header">
-          <span class={`tier-badge ${tier.class}`}>{tier.name}</span>
+          <a href={`/tier/${tier.class}/`} class="tier-link">
+            <span class={`tier-badge ${tier.class}`}>{tier.name}</span>
+          </a>
           <span class="tier-count">{tier.recipes.length} recipes</span>
         </div>
         <div class="recipe-grid">
           {tier.recipes.map(recipe => (
-            <a href={`/recipes/${recipe.data.recipeSlug}`} class={`recipe-card ${tier.class}`}>
-              <span class="recipe-number">#{String(recipe.data.recipeNumber).padStart(2, '0')}</span>
-              <h3>{recipe.data.title}</h3>
-              <p class="recipe-subtitle">{recipe.data.subtitle}</p>
-            </a>
+            <RecipeCard
+              slug={recipe.data.recipeSlug}
+              title={recipe.data.title}
+              subtitle={recipe.data.subtitle}
+              number={recipe.data.recipeNumber}
+              tierClass={tier.class}
+            />
           ))}
         </div>
       </section>
@@ -91,63 +96,20 @@ const tiers = [
     color: var(--color-text-muted);
   }
 
+  .tier-link {
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .tier-link:hover {
+    opacity: 0.85;
+  }
+
   .recipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     gap: 1rem;
     margin-bottom: 1rem;
-  }
-
-  .recipe-card {
-    display: block;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-decoration: none;
-    color: var(--color-text);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .recipe-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-  }
-
-  .recipe-card.chill::before { background: var(--tier-chill); }
-  .recipe-card.legit::before { background: var(--tier-legit); }
-  .recipe-card.real-deal::before { background: var(--tier-real-deal); }
-  .recipe-card.ordeal::before { background: var(--tier-ordeal); }
-
-  .recipe-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-
-  .recipe-number {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--color-text-muted);
-    letter-spacing: 0.04em;
-  }
-
-  .recipe-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    margin: 0.25rem 0 0.35rem;
-  }
-
-  .recipe-subtitle {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    font-style: italic;
-    line-height: 1.4;
   }
 
   @media (max-width: 640px) {
